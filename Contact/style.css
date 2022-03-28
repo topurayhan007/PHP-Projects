@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Poppins;
+    background: linear-gradient(-45deg,#0c365a, #24617e);
+}
+
+#heading{
+    color: #c7eef5;
+}
+h1{
+    font-weight: bold;
+}
+h3{
+    font-weight: bold;
+}
+
+#row-div{
+    border-radius: 40px;
+}
+#frosted{
+    background: linear-gradient(45deg, #55bdca, #4095a7) ;
+    border-radius: 4rem 0.5rem;
+}
+
+a {
+    color: #c7eef5;
+}
+
+i{
+    padding: 0.5rem;
+}
+
+#contact{
+    background-color: #02244a;
+    color: #c7eef5;
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 1rem;
+}
+
+#form-div{
+    background-color: #f07c41;
+    color:#02244a;
+    font-weight: bold;
+    border-bottom-right-radius: 3rem;
+    border-top-right-radius: 1rem;
+}
+@media only screen and (max-width: 912px) {
+    #contact{
+        border-top-left-radius: 3rem;
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0rem;
+        border-bottom-right-radius: 0rem;
+    }
+    #form-div{
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 3rem;
+        border-top-left-radius: 0rem;
+        border-top-right-radius: 0rem;
+    }
+  }
+#button1{
+    background-color: #f07c41;
+    color: #02244a;
+    font-weight: bold;
+    border-radius: 2rem;
+    padding: 0.6rem;
+}
+#button{
+    background-color: #02244a;
+    color: #f07c41;
+    font-weight: bold;
+    border-radius: 2rem;
+    width: 7rem;
+    padding: 0.7rem;
+
+}
+.fa-solid{
+    color: #f07c41;
+}
+.fa-brands:hover{
+    color: #f07c41;
+}

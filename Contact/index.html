@@ -25,7 +25,7 @@
 
 </head>
 <body>
-    <div class="container-fluid bg-primary min-vh-100 h-auto overflow-auto d-flex justify-content-center align-items-center" id="main">
+    <div class="container-fluid  min-vh-100 h-auto overflow-auto d-flex justify-content-center align-items-center" id="main">
         <div class="container py-5" id="sub-main">
             
 
@@ -36,9 +36,9 @@
                 </p>
             </div>
 
-            <div class="container bg-light p-md-5 p-5 bg-opacity-50 rounded shadow-lg d-flex align-items-center justify-content-center" id="frosted">
+            <div class="container p-md-5 p-5 shadow-lg d-flex align-items-center justify-content-center" id="frosted">
                 <div class="row" id="row-div">
-                    <div class="col-lg-5 col-md-12 col-sm-12 bg-danger p-mb-5  text-start" id="contact">
+                    <div class="col-lg-5 col-md-12 col-sm-12 p-mb-5  text-start" id="contact">
                         <div class="container p-2 p-md-5 p-sm-3 ">
                             <h3 class="p-5 px-0">Contact Information</h3>
                             <div class="container col-md-12 col-lg-12 col-sm-12 p-2 px-0 overflow-auto" id="contact-info">
@@ -55,15 +55,15 @@
                                 <a href="https://www.twitter.com/topurayhan007/"><i class="fa-brands fa-twitter fa-2x"></i></a>
                             </div>
                             <form action="data-fetch.php">
-                                <div class="col-12 col-sm-12 mb-3" id="button">
-                                    <button type="submit" action="data-fetch.php" class="btn btn-primary">Admin Panel</button>
+                                <div class="col-12 col-sm-12 mb-3" >
+                                    <button type="submit" action="data-fetch.php" id="button1" class="btn">Admin Panel</button>
                                 </div>
                             </form>
                             
                         </div>
                         
                     </div>
-                    <div class="col-lg-7 col-md-12 col-sm-12 bg-warning p-md-5" id="form-div">
+                    <div class="col-lg-7 col-md-12 col-sm-12  p-md-5" id="form-div">
                         <form action="contact.php" method="POST" class="row g-3 p-2 pt-5 pt-md-3">
                             
                             <div class="col-md-6 col-sm-12">
@@ -96,8 +96,8 @@
                                 <textarea class="form-control" name="message" id="exampleFormControlTextarea1" placeholder="Type your message here..." rows="3" required></textarea>
                             </div>
 
-                            <div class="col-12 col-sm-12 mb-3 text-center" id="button">
-                              <button type="submit" onclick="myFunction()" name="submit" class="btn btn-primary">Send</button>
+                            <div class="col-12 col-sm-12 mb-3 pt-3 text-center" >
+                              <button type="submit" id="button" name="submit" class="btn">Send</button>
                             </div>
                           </form>
                     </div>
