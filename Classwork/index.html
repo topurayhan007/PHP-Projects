@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('button').onclick = count;
+            document.querySelector('#form').onsubmit = function(){
+                const name = document.querySelector('#name').value;
+                alert(`Hello ${name}!`);
+            };
+            document.querySelectorAll('.color-change').forEach(
+                function(button){
+                    button.onclick = function(){
+                        document.querySelector('#hello').style.color = button.dataset.color;
+                    };
+                }
+            );
+            document.querySelector('#new-task').onsubmit = function(){
+                const li = document.createElement('li');
+                li.innerHTML = document.querySelector('#task').value;
+                
+            };
+            
+        });
+        let counter = 0;
+        function count(){
+            counter++;
+            document.querySelector('#counter').innerHTML = counter;
+            if(counter % 10 === 0){
+                alert(`Counter is at ${counter}!`);
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <h1 id="hello">Welcome</h1>
+
+    <h1 id="counter">0</h1>
+    <button>Counter!</button>
+
+    <form action="" id="form" style="padding-top: 2rem;">
+        <input type="text" id="name">
+        <input type="submit">
+    </form>
+    <div style="padding-top: 2rem;">
+        <button class="color-change" data-color="red">Red</button>
+        <button class="color-change" data-color="blue">Blue</button>
+        <button class="color-change" data-color="green">Green</button>
+    </div>
+    
+</body>
+</html>
