@@ -26,6 +26,24 @@ function getWeather(){
             document.getElementById("date").innerHTML = date.toLocaleDateString('en-us', { weekday:"short", month:"long", day:"numeric"}) +"th";
         }
         
+        var condition = data.list[0].weather[0].main;
+
+        if (condition == "Clear" || condition == "Clouds"){
+            document.body.style.backgroundImage = "url('media/clear.jpg')";
+        }
+        else if (condition == "Rain" || condition == "Drizzle"){
+            document.body.style.backgroundImage = "url('media/rain.jpg')";
+        }
+        else if (condition == "Thunderstorm"){
+            document.body.style.backgroundImage = "url('media/thunderstorm.jpg')";
+        }
+        else if (condition == "Snow"){
+            document.body.style.backgroundImage = "url('media/snow.jpg')";
+        }
+        else {
+            document.body.style.backgroundImage = "url('media/foggy.jpg')";
+        }
+
         document.getElementById("iconM").src = "http://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + "@2x.png";
         document.getElementById("descM").innerHTML = data.list[0].weather[0].description;
 
