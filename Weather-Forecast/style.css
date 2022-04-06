@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&family=Roboto+Condensed:wght@400;700&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -6,19 +8,28 @@
 
 body{
     font-family: Poppins;
-    background: linear-gradient(-45deg,#0c365a, #24617e);
+    background: linear-gradient(-45deg,#222629, #474B4F);
+}
+.main{
+    background: linear-gradient(-45deg, #eaf6ff, #c1e1ff);
 }
 
+.sub-main{
+    /* background: #343557; */
+    background: linear-gradient(-45deg,#292a4a,#343557);
+    color:#eaf6ff;
+}
 #search-div{
     height: 3rem;
-    background-color: skyblue;
+    background-color: #ec6f4d;
     min-width: 3rem;
     max-width: 30rem;
-    border: solid 0.2rem salmon;
+    border: solid 0.2rem #384974;
+    
 }
 
 .search-icon{
-    color: coral;
+    color: #384974;
     
 }
 
@@ -27,6 +38,11 @@ body{
     outline: none;
     height: 2.5rem;
     max-width: 30rem;
+    color: #384974;
+    font-weight: bold;
+}
+#search::placeholder{
+    color: #384974;
 }
 #location::first-letter {
     text-transform:capitalize;
@@ -50,14 +66,33 @@ body{
 
 #tempM{
     font-size: 10vmax;
+    font-family: 'Roboto Condensed';
     font-weight: bold;
 }
-
-
+#location{
+    font-size: 4vmax;
+    font-weight: bold;
+}
+#date{
+    font-weight: bold;
+}
+#descM{
+    font-weight: bold;
+}
 /* #fiveDay::-webkit-scrollbar{
     display: none;
 } */
-
+#fiveDay h1,h3,h4{
+    font-weight: bold;
+}
+#fiveDay h1{
+    font-family: 'Roboto Condensed';
+    font-size: 3rem;
+}
+#fiveDay{
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
 #fiveDayTiles{
     min-width: 10rem;
     max-width: 25rem;
@@ -70,4 +105,12 @@ body{
 #fiveDayTiles:hover{
     opacity: 90%;
 }
-
+#fiveDayTiles:nth-child(odd){
+    background-color: #a0b0da;
+    color: #304069;
+    
+}
+#fiveDayTiles:nth-child(even){
+    background-color: #7d91ae;
+    color: #304069;
+}
