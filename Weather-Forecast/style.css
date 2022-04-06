@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Poppins;
+    background: linear-gradient(-45deg,#0c365a, #24617e);
+}
+
+#search-div{
+    height: 3rem;
+    background-color: aqua;
+    min-width: 3rem;
+    max-width: 30rem;
+    border: solid 0.2rem salmon;
+}
+
+.search-icon{
+    color: coral;
+}
+
+#search{
+    border: none; 
+    outline: none;
+    height: 2.5rem;
+    max-width: 30rem;
+}
+
+
+/* #fiveDay::-webkit-scrollbar{
+    display: none;
+} */
+
+#fiveDayTiles{
+    min-width: 10rem;
+    max-width: 25rem;
+    min-height: 15rem;
+    max-height: 20rem;
+    margin-right: 1rem;
+    text-align: center;
+}
