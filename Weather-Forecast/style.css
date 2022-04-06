@@ -11,7 +11,7 @@ body{
 
 #search-div{
     height: 3rem;
-    background-color: aqua;
+    background-color: skyblue;
     min-width: 3rem;
     max-width: 30rem;
     border: solid 0.2rem salmon;
@@ -19,13 +19,38 @@ body{
 
 .search-icon{
     color: coral;
+    
 }
 
 #search{
-    border: none; 
+    border: none;
     outline: none;
     height: 2.5rem;
     max-width: 30rem;
+}
+#location::first-letter {
+    text-transform:capitalize;
+}
+#descM::first-letter {
+    text-transform:capitalize;
+}
+
+#desc1::first-letter {
+    text-transform:capitalize;
+}
+#desc2::first-letter {
+    text-transform:capitalize;
+}
+#desc3::first-letter {
+    text-transform:capitalize;
+}
+#desc4::first-letter {
+    text-transform:capitalize;
+}
+
+#tempM{
+    font-size: 10vmax;
+    font-weight: bold;
 }
 
 
@@ -40,4 +65,9 @@ body{
     max-height: 20rem;
     margin-right: 1rem;
     text-align: center;
+    border-radius: 0.5rem;
 }
+#fiveDayTiles:hover{
+    opacity: 90%;
+}
+

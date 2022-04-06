@@ -22,54 +22,105 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body onload="defaultLocation()">
     
     <div class="container-fluid min-vh-100 overflow-auto d-flex align-items-center justify-content-center">
         <div class="container-fluid">
-            <div class="container col-md-12 col-sm-12 col-lg-12 mt-5 d-flex align-items-center justify-content-start text-center rounded-pill" id="search-div">
-                <i class="fa-solid fa-magnifying-glass ps-1 rounded-pill search-icon"></i>
-                <input type="text" name="" class="ps-1 ps-md-2  rounded-pill bg-transparent" id="search" placeholder="Search city. . .">
+            <div class="container col-md-12 col-sm-12 col-lg-12 mt-5 text-center rounded-pill" id="search-div">
+                <div class="d-flex">
+                    <input type="search" class="form-control w-100 ds-input rounded-pill bg-transparent" required id="search" placeholder="Search city..." aria-label="Search docs for..." autocomplete="off" data-bd-docs-version="5.1" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto">
+                    <button onclick="getWeather()" id="myBtn" type="button" class="btn"><i class="fa-solid fa-magnifying-glass rounded-pill search-icon"></i></button>
+                </div>
             
             </div>
 
-            <div class="container-fluid p-md-5 p-5 mt-0">
+            <div class="container p-md-4 p-5 mt-0">
                 <div class="row">
                     <div class="col-md-6 col-lg-6 col-sm-12 bg-danger text-center">
-                        <div class="container d-block align-items-center justify-content-center">
+                        <div class="container p-5 align-items-center justify-content-center">
                             <h1 id="location" class="text-start"> Dhaka </h1>
                             <h2 id="date" class="text-start"> Tuesday, 5th April</h2>
-                            <div class="container text-start px-0" id="icon">
-                                <i class="fa-solid fa-cloud"></i>
+                            <div class="container text-start px-0" id="iconDiv">
+                                <img src="" alt="" id="iconM">
+                                <h6 id="descM">Cloudy</h6>
                             </div>
+
                             
                         </div>
                         
 
                     </div>
-                    <div class="col-md-6 col-lg-6 col-sm-12 bg-warning d-flex align-items-center justify-content-center"> 
-                        <div class="container text-end">
-                            <h1 id="temp"> 33°</h1>
+                    <div class="col-md-6 col-lg-6 col-sm-12 bg-warning pb-5 d-flex align-items-center justify-content-center"> 
+                        <div class="container text-center">
+                            <div class="container p-3 d-flex align-items-start justify-content-center">
+                                <h1 id="tempM"> 33</h1><h1 class="pt-2 pt-md-2 pt-lg-4">°C</h1>
+                            </div>
+                            <div class="container align-items-center justify-content-center px-0">
+                                <div class="row d-flex">
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <div class="container d-flex">
+                                            <i class="fa-solid fa-temperature-three-quarters pe-1"></i>
+                                            <h6 id="maxTemp"></i> Max temp: 34°C </h6>
+                                        </div>
+                                        <div class="container d-flex">
+                                            <i class="fa-solid fa-temperature-quarter pe-1"></i>
+                                            <h6 id="minTemp">Min temp: 34°C </h6>
+                                        </div>
+                                        <div class="container d-flex">
+                                            <i class="fa-solid fa-droplet pe-1"></i>
+                                            <h6 id="humidity">Humidity: 34°C </h6>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12">
+                                        <div class="container d-flex">
+                                            <i class="fa-solid fa-wind pe-1"></i>
+                                            <h6 id="wind">Wind speed: 34°C </h6>
+                                        </div>
+                                        <div class="container d-flex">
+                                            <i class="fa-solid fa-arrows-to-dot pe-1"></i>
+                                            <h6 id="pressure">Pressure: 34°C </h6>
+                                        </div>
+                                        <div class="container d-flex">
+                                            <i class="fa-solid fa-eye pe-1"></i>
+                                            <h6 id="visible"> Visibility: 34°C </h6> 
+                                        </div>
+    
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
                         </div>
                         
                     </div>
                 </div>
             </div>
 
-            <div class="container-fluid p-4 pt-0 p-md-5 mb-5 d-flex overflow-auto" id="fiveDay">
-                <div class="col-lg-12 col-md-12 col-sm-12 p-3 p-md-3 bg-danger" id="fiveDayTiles">
-                    <h1>20°</h1>
+            <div class="container px-md-0 p-4 pt-0 p-md-5 mb-4 d-flex overflow-auto" id="fiveDay">
+                <div class="col-lg-12 col-md-12 col-sm-12 p-3 p-md-3 bg-light bg-opacity-50 shadow-lg" id="fiveDayTiles">
+                    <h3 id="day1">Sunday</h3>
+                    <img id="icon1" src="" alt="">
+                    <h1 id="temp1">20°</h1>
+                    <h4 id="desc1">Cloudy</h4>
                 </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 p-3 p-md-3 bg-success" id="fiveDayTiles">
-                    <h1>20°</h1>
+                <div class="col-lg-12 col-md-12 col-sm-12 p-3 p-md-3 bg-light bg-opacity-50 shadow-lg" id="fiveDayTiles">
+                    <h3 id="day2">Sunday</h3>
+                    <img id="icon2" src="" alt="">
+                    <h1 id="temp2">20°</h1>
+                    <h4 id="desc2">Cloudy</h4>
                 </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 p-3 p-md-3 " id="fiveDayTiles">
-                    <h1>20°</h1>
+                <div class="col-lg-12 col-md-12 col-sm-12 p-3 p-md-3 bg-light bg-opacity-50 shadow-lg" id="fiveDayTiles">
+                    <h3 id="day3">Sunday</h3>
+                    <img id="icon3" src="" alt="">
+                    <h1 id="temp3">20°</h1>
+                    <h4 id="desc3">Cloudy</h4>
                 </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 p-3 p-md-3 " id="fiveDayTiles">
-                    <h1>20°</h1>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 p-3 p-md-3 " id="fiveDayTiles">
-                    <h1>20°</h1>
+                <div class="col-lg-12 col-md-12 col-sm-12 p-3 p-md-3 bg-light bg-opacity-50 shadow-lg" id="fiveDayTiles">
+                    <h3 id="day4">Sunday</h3>
+                    <img id="icon4" src="" alt="">
+                    <h1 id="temp4">20°</h1>
+                    <h4 id="desc4">Cloudy</h4>
                 </div>
             </div>
                 
