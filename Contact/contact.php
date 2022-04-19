@@ -23,6 +23,7 @@
             // $success = "Records added successfully!";
             // echo '<script>alert("Records added successfully!")</script>';
             echo "Records added successfully!";
+            header("Location: index.html");
             
         }
         else{
